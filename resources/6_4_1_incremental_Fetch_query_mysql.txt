@@ -1,0 +1,40 @@
+6_4_1_incremental_Fetch_query_mysql
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CREATE TABLE `store` (
+  `store_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `manager_staff_id` tinyint(3) unsigned NOT NULL,
+  `address_id` smallint(5) unsigned NOT NULL,
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`store_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+INSERT INTO `employees`.`store` (`store_id`, `manager_staff_id`, `address_id`, `last_update`) VALUES ('1', '1', '1', '2006-02-15 04:57:12');
+INSERT INTO `employees`.`store` (`store_id`, `manager_staff_id`, `address_id`, `last_update`) VALUES ('2', '23', '22', '2006-02-15 04:57:14');
+
+INSERT INTO `employees`.`store` (`store_id`, `manager_staff_id`, `address_id`, `last_update`) VALUES ('3', '23', '22', '2006-02-15 04:58:14');
+
+INSERT INTO `employees`.`store` (`store_id`, `manager_staff_id`, `address_id`, `last_update`) VALUES ('4', '23', '22', '2006-02-15 04:59:14');
+
+Add DBCPConnectionPool Controller Service
+
+jdbc:mysql://127.0.0.1:3306
+
+com.mysql.jdbc.Driver
+
+F:\software\driver\mysql-connector-java-8.0.15\mysql-connector-java-8.0.15.jar
+
+https://dev.mysql.com/downloads/connector/j/
+
+QueryDataBaseTable -> AvroToJSON -> PutFile
+
+Duration 60 secs
+
+
+
+QueryDatabaseTable
+ConvertAvroToJSON
+PutFile

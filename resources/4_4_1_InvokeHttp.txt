@@ -1,0 +1,10 @@
+4_4_1_InvokeHttp
+~~~~~~~~~~~~~~~
+
+
+https://postman-echo.com/get?foo1=bar1&foo2=bar2
+
+echo -n|openssl s_client -connect postman-echo.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > postman-pub-cert.crt
+keytool -import -file postman-pub-cert.crt -alias postman-pub-cert -keystore 1_server_truststore.jks -storepass NifiSuperSecret -noprompt 
+
+keytool -list -v -keystore 1_server_truststore.jks

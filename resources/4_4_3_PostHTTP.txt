@@ -1,0 +1,16 @@
+4_4_3_PostHTTP
+~~~~~~~~~~~~~~
+
+https://postman-echo.com/post
+use Chunked Encoding : False
+StandardSSLContextService
+
+		Keystore Filename : Keystore
+ keytool -genkeypair -alias nifiserver -keyalg RSA -keypass NifiSuperSecret -storepass NifiSuperSecret -keystore post_http_server_keystore.jks -dname "CN=Muthu4all NiFi Server" -noprompt
+ 
+ /root/nifi/spost_http_server_keystore.jks
+ 
+ keytool -list -v -keystore server_truststore.jks
+ 
+scp post_http_server_keystore.jks root@node3:/root/nifi/
+

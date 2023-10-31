@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>Nifi_AWS_S3_ListBucket</description>
+    <groupId>e892d778-0169-1000-4ffb-8afcd77ca383</groupId>
+    <name>Nifi_AWS_S3_ListBucket</name>
+    <snippet>
+        <connections>
+            <id>653556cc-3248-33e1-0000-000000000000</id>
+            <parentGroupId>22271d41-8fb0-3d2d-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>22271d41-8fb0-3d2d-0000-000000000000</groupId>
+                <id>0d3e263b-362e-3e26-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>22271d41-8fb0-3d2d-0000-000000000000</groupId>
+                <id>57332ddb-e560-33a0-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <processors>
+            <id>0d3e263b-362e-3e26-0000-000000000000</id>
+            <parentGroupId>22271d41-8fb0-3d2d-0000-000000000000</parentGroupId>
+            <position>
+                <x>637.0</x>
+                <y>248.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>DEBUG</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Log Level</key>
+                        <value>
+                            <name>Log Level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log Payload</key>
+                        <value>
+                            <name>Log Payload</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Log</key>
+                        <value>
+                            <name>Attributes to Log</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-log-regex</key>
+                        <value>
+                            <name>attributes-to-log-regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Ignore</key>
+                        <value>
+                            <name>Attributes to Ignore</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-ignore-regex</key>
+                        <value>
+                            <name>attributes-to-ignore-regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log prefix</key>
+                        <value>
+                            <name>Log prefix</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Log Level</key>
+                        <value>info</value>
+                    </entry>
+                    <entry>
+                        <key>Log Payload</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Log</key>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-log-regex</key>
+                        <value>.*</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Ignore</key>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-ignore-regex</key>
+                    </entry>
+                    <entry>
+                        <key>Log prefix</key>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>windows-1252</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>LogAttribute</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.LogAttribute</type>
+        </processors>
+        <processors>
+            <id>57332ddb-e560-33a0-0000-000000000000</id>
+            <parentGroupId>22271d41-8fb0-3d2d-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-aws-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Bucket</key>
+                        <value>
+                            <name>Bucket</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Region</key>
+                        <value>
+                            <name>Region</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Access Key</key>
+                        <value>
+                            <name>Access Key</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Secret Key</key>
+                        <value>
+                            <name>Secret Key</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>write-s3-object-tags</key>
+                        <value>
+                            <name>write-s3-object-tags</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Credentials File</key>
+                        <value>
+                            <name>Credentials File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>AWS Credentials Provider service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService</identifiesControllerService>
+                            <name>AWS Credentials Provider service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Communications Timeout</key>
+                        <value>
+                            <name>Communications Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>SSL Context Service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                            <name>SSL Context Service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Endpoint Override URL</key>
+                        <value>
+                            <name>Endpoint Override URL</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Signer Override</key>
+                        <value>
+                            <name>Signer Override</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>proxy-configuration-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.proxy.ProxyConfigurationService</identifiesControllerService>
+                            <name>proxy-configuration-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Proxy Host</key>
+                        <value>
+                            <name>Proxy Host</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Proxy Host Port</key>
+                        <value>
+                            <name>Proxy Host Port</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>proxy-user-name</key>
+                        <value>
+                            <name>proxy-user-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>proxy-user-password</key>
+                        <value>
+                            <name>proxy-user-password</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>delimiter</key>
+                        <value>
+                            <name>delimiter</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>prefix</key>
+                        <value>
+                            <name>prefix</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>use-versions</key>
+                        <value>
+                            <name>use-versions</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>list-type</key>
+                        <value>
+                            <name>list-type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>min-age</key>
+                        <value>
+                            <name>min-age</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>PRIMARY</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Bucket</key>
+                        <value>muthu4all-nifi</value>
+                    </entry>
+                    <entry>
+                        <key>Region</key>
+                        <value>us-west-2</value>
+                    </entry>
+                    <entry>
+                        <key>Access Key</key>
+                    </entry>
+                    <entry>
+                        <key>Secret Key</key>
+                    </entry>
+                    <entry>
+                        <key>write-s3-object-tags</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Credentials File</key>
+                    </entry>
+                    <entry>
+                        <key>AWS Credentials Provider service</key>
+                    </entry>
+                    <entry>
+                        <key>Communications Timeout</key>
+                        <value>30 secs</value>
+                    </entry>
+                    <entry>
+                        <key>SSL Context Service</key>
+                    </entry>
+                    <entry>
+                        <key>Endpoint Override URL</key>
+                    </entry>
+                    <entry>
+                        <key>Signer Override</key>
+                        <value>Default Signature</value>
+                    </entry>
+                    <entry>
+                        <key>proxy-configuration-service</key>
+                    </entry>
+                    <entry>
+                        <key>Proxy Host</key>
+                    </entry>
+                    <entry>
+                        <key>Proxy Host Port</key>
+                    </entry>
+                    <entry>
+                        <key>proxy-user-name</key>
+                    </entry>
+                    <entry>
+                        <key>proxy-user-password</key>
+                    </entry>
+                    <entry>
+                        <key>delimiter</key>
+                    </entry>
+                    <entry>
+                        <key>prefix</key>
+                    </entry>
+                    <entry>
+                        <key>use-versions</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>list-type</key>
+                        <value>1</value>
+                    </entry>
+                    <entry>
+                        <key>min-age</key>
+                        <value>0 sec</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>10 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>true</executionNodeRestricted>
+            <name>ListS3</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.aws.s3.ListS3</type>
+        </processors>
+    </snippet>
+    <timestamp>04/05/2019 19:26:32 IST</timestamp>
+</template>

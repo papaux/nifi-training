@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>HTTP_Processor_PostHTTP_SSL_Context_Service</description>
+    <groupId>70282bae-0169-1000-6b1d-0c69f9b50381</groupId>
+    <name>HTTP_Processor_PostHTTP_SSL_Context_Service</name>
+    <snippet>
+        <connections>
+            <id>93b90de7-b142-3070-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>abaf2b25-f571-3c01-0000-000000000000</groupId>
+                <id>46f04152-1615-330e-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>abaf2b25-f571-3c01-0000-000000000000</groupId>
+                <id>e590d3cc-0061-3d1d-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>c1e0e96f-6484-3a2a-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>463.0</x>
+                <y>216.55700463199935</y>
+            </bends>
+            <bends>
+                <x>463.0</x>
+                <y>266.55700463199935</y>
+            </bends>
+            <destination>
+                <groupId>abaf2b25-f571-3c01-0000-000000000000</groupId>
+                <id>46f04152-1615-330e-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>60 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>abaf2b25-f571-3c01-0000-000000000000</groupId>
+                <id>46f04152-1615-330e-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>d4750443-0d95-3307-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>abaf2b25-f571-3c01-0000-000000000000</groupId>
+                <id>5a9ebb33-1a2e-3e4b-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>abaf2b25-f571-3c01-0000-000000000000</groupId>
+                <id>46f04152-1615-330e-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <controllerServices>
+            <id>e4efd6af-5165-36a0-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <bundle>
+                <artifact>nifi-ssl-context-service-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.0</version>
+            </bundle>
+            <comments></comments>
+            <descriptors>
+                <entry>
+                    <key>Keystore Filename</key>
+                    <value>
+                        <name>Keystore Filename</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Keystore Password</key>
+                    <value>
+                        <name>Keystore Password</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>key-password</key>
+                    <value>
+                        <name>key-password</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Keystore Type</key>
+                    <value>
+                        <name>Keystore Type</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Truststore Filename</key>
+                    <value>
+                        <name>Truststore Filename</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Truststore Password</key>
+                    <value>
+                        <name>Truststore Password</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Truststore Type</key>
+                    <value>
+                        <name>Truststore Type</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>SSL Protocol</key>
+                    <value>
+                        <name>SSL Protocol</name>
+                    </value>
+                </entry>
+            </descriptors>
+            <name>StandardSSLContextService</name>
+            <persistsState>false</persistsState>
+            <properties>
+                <entry>
+                    <key>Keystore Filename</key>
+                    <value>/root/nifi/post_http_server_keystore.jks</value>
+                </entry>
+                <entry>
+                    <key>Keystore Password</key>
+                </entry>
+                <entry>
+                    <key>key-password</key>
+                </entry>
+                <entry>
+                    <key>Keystore Type</key>
+                    <value>JKS</value>
+                </entry>
+                <entry>
+                    <key>Truststore Filename</key>
+                </entry>
+                <entry>
+                    <key>Truststore Password</key>
+                </entry>
+                <entry>
+                    <key>Truststore Type</key>
+                </entry>
+                <entry>
+                    <key>SSL Protocol</key>
+                    <value>SSL</value>
+                </entry>
+            </properties>
+            <state>ENABLED</state>
+            <type>org.apache.nifi.ssl.StandardSSLContextService</type>
+        </controllerServices>
+        <processors>
+            <id>46f04152-1615-330e-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>176.55700463199935</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>URL</key>
+                        <value>
+                            <name>URL</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Max Batch Size</key>
+                        <value>
+                            <name>Max Batch Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Max Data to Post per Second</key>
+                        <value>
+                            <name>Max Data to Post per Second</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>SSL Context Service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                            <name>SSL Context Service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Username</key>
+                        <value>
+                            <name>Username</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                        <value>
+                            <name>Password</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Send as FlowFile</key>
+                        <value>
+                            <name>Send as FlowFile</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Use Chunked Encoding</key>
+                        <value>
+                            <name>Use Chunked Encoding</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Compression Level</key>
+                        <value>
+                            <name>Compression Level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Connection Timeout</key>
+                        <value>
+                            <name>Connection Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Timeout</key>
+                        <value>
+                            <name>Data Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Send as HTTP Headers (Regex)</key>
+                        <value>
+                            <name>Attributes to Send as HTTP Headers (Regex)</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>User Agent</key>
+                        <value>
+                            <name>User Agent</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>proxy-configuration-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.proxy.ProxyConfigurationService</identifiesControllerService>
+                            <name>proxy-configuration-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Proxy Host</key>
+                        <value>
+                            <name>Proxy Host</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Proxy Port</key>
+                        <value>
+                            <name>Proxy Port</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Content-Type</key>
+                        <value>
+                            <name>Content-Type</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>PRIMARY</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>URL</key>
+                        <value>https://postman-echo.com/post</value>
+                    </entry>
+                    <entry>
+                        <key>Max Batch Size</key>
+                        <value>100 MB</value>
+                    </entry>
+                    <entry>
+                        <key>Max Data to Post per Second</key>
+                    </entry>
+                    <entry>
+                        <key>SSL Context Service</key>
+                        <value>e4efd6af-5165-36a0-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>Username</key>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                    </entry>
+                    <entry>
+                        <key>Send as FlowFile</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Use Chunked Encoding</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Compression Level</key>
+                        <value>0</value>
+                    </entry>
+                    <entry>
+                        <key>Connection Timeout</key>
+                        <value>30 sec</value>
+                    </entry>
+                    <entry>
+                        <key>Data Timeout</key>
+                        <value>30 sec</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Send as HTTP Headers (Regex)</key>
+                    </entry>
+                    <entry>
+                        <key>User Agent</key>
+                        <value>Apache-HttpClient/4.5.5 (Java/1.8.0_141)</value>
+                    </entry>
+                    <entry>
+                        <key>proxy-configuration-service</key>
+                    </entry>
+                    <entry>
+                        <key>Proxy Host</key>
+                    </entry>
+                    <entry>
+                        <key>Proxy Port</key>
+                    </entry>
+                    <entry>
+                        <key>Content-Type</key>
+                        <value>${mime.type}</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>PostHTTP</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.PostHTTP</type>
+        </processors>
+        <processors>
+            <id>5a9ebb33-1a2e-3e4b-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <position>
+                <x>646.993677576342</x>
+                <y>283.24951717796</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>INFO</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Log Level</key>
+                        <value>
+                            <name>Log Level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log Payload</key>
+                        <value>
+                            <name>Log Payload</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Log</key>
+                        <value>
+                            <name>Attributes to Log</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-log-regex</key>
+                        <value>
+                            <name>attributes-to-log-regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Ignore</key>
+                        <value>
+                            <name>Attributes to Ignore</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-ignore-regex</key>
+                        <value>
+                            <name>attributes-to-ignore-regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log prefix</key>
+                        <value>
+                            <name>Log prefix</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Log Level</key>
+                        <value>info</value>
+                    </entry>
+                    <entry>
+                        <key>Log Payload</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Log</key>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-log-regex</key>
+                        <value>.*</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Ignore</key>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-ignore-regex</key>
+                    </entry>
+                    <entry>
+                        <key>Log prefix</key>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>UTF-8</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>LogAttribute</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.LogAttribute</type>
+        </processors>
+        <processors>
+            <id>e590d3cc-0061-3d1d-0000-000000000000</id>
+            <parentGroupId>abaf2b25-f571-3c01-0000-000000000000</parentGroupId>
+            <position>
+                <x>582.1577585045382</x>
+                <y>0.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>File Size</key>
+                        <value>
+                            <name>File Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Batch Size</key>
+                        <value>
+                            <name>Batch Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>
+                            <name>Data Format</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Unique FlowFiles</key>
+                        <value>
+                            <name>Unique FlowFiles</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>generate-ff-custom-text</key>
+                        <value>
+                            <name>generate-ff-custom-text</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>PRIMARY</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>File Size</key>
+                        <value>0B</value>
+                    </entry>
+                    <entry>
+                        <key>Batch Size</key>
+                        <value>1</value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>Text</value>
+                    </entry>
+                    <entry>
+                        <key>Unique FlowFiles</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>generate-ff-custom-text</key>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>UTF-8</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>10 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>GenerateFlowFile</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+        </processors>
+    </snippet>
+    <timestamp>03/17/2019 08:26:44 IST</timestamp>
+</template>
