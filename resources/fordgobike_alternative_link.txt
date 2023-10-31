@@ -1,0 +1,1 @@
+http://hamilton.socialbicycles.com/opendata/station_status.json

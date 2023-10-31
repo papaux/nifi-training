@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>custom_processor</description>
+    <groupId>811e8a4f-0168-1000-ed1f-2bbb5e6a61ff</groupId>
+    <name>custom_processor</name>
+    <snippet>
+        <connections>
+            <id>49f95207-7772-36b4-0000-000000000000</id>
+            <parentGroupId>e1d413d7-155c-36bd-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>e1d413d7-155c-36bd-0000-000000000000</groupId>
+                <id>c73a3e77-9c34-3c79-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>e1d413d7-155c-36bd-0000-000000000000</groupId>
+                <id>1f42d027-6756-3bcb-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>c3a7a39c-fc45-3f9d-0000-000000000000</id>
+            <parentGroupId>e1d413d7-155c-36bd-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>e1d413d7-155c-36bd-0000-000000000000</groupId>
+                <id>645e87d2-d441-3557-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>Success</selectedRelationships>
+            <source>
+                <groupId>e1d413d7-155c-36bd-0000-000000000000</groupId>
+                <id>c73a3e77-9c34-3c79-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <processors>
+            <id>1f42d027-6756-3bcb-0000-000000000000</id>
+            <parentGroupId>e1d413d7-155c-36bd-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>File Size</key>
+                        <value>
+                            <name>File Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Batch Size</key>
+                        <value>
+                            <name>Batch Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>
+                            <name>Data Format</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Unique FlowFiles</key>
+                        <value>
+                            <name>Unique FlowFiles</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>generate-ff-custom-text</key>
+                        <value>
+                            <name>generate-ff-custom-text</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>File Size</key>
+                        <value>0B</value>
+                    </entry>
+                    <entry>
+                        <key>Batch Size</key>
+                        <value>1</value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>Text</value>
+                    </entry>
+                    <entry>
+                        <key>Unique FlowFiles</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>generate-ff-custom-text</key>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>UTF-8</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>10 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>GenerateFlowFile</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+        </processors>
+        <processors>
+            <id>645e87d2-d441-3557-0000-000000000000</id>
+            <parentGroupId>e1d413d7-155c-36bd-0000-000000000000</parentGroupId>
+            <position>
+                <x>934.7061405939628</x>
+                <y>186.3352534611298</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>DEBUG</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Log Level</key>
+                        <value>
+                            <name>Log Level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log Payload</key>
+                        <value>
+                            <name>Log Payload</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Log</key>
+                        <value>
+                            <name>Attributes to Log</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-log-regex</key>
+                        <value>
+                            <name>attributes-to-log-regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Ignore</key>
+                        <value>
+                            <name>Attributes to Ignore</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-ignore-regex</key>
+                        <value>
+                            <name>attributes-to-ignore-regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log prefix</key>
+                        <value>
+                            <name>Log prefix</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Log Level</key>
+                        <value>info</value>
+                    </entry>
+                    <entry>
+                        <key>Log Payload</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Log</key>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-log-regex</key>
+                        <value>.*</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes to Ignore</key>
+                    </entry>
+                    <entry>
+                        <key>attributes-to-ignore-regex</key>
+                    </entry>
+                    <entry>
+                        <key>Log prefix</key>
+                    </entry>
+                    <entry>
+                        <key>character-set</key>
+                        <value>windows-1252</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>LogAttribute</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.LogAttribute</type>
+        </processors>
+        <processors>
+            <id>c73a3e77-9c34-3c79-0000-000000000000</id>
+            <parentGroupId>e1d413d7-155c-36bd-0000-000000000000</parentGroupId>
+            <position>
+                <x>389.33474852684276</x>
+                <y>237.84254141211102</y>
+            </position>
+            <bundle>
+                <artifact>nifi-sumtwoint-nar</artifact>
+                <group>com.muthu4all.nifi</group>
+                <version>1.9.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Input First Number</key>
+                        <value>
+                            <name>Input First Number</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Input Second Number</key>
+                        <value>
+                            <name>Input Second Number</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Input First Number</key>
+                        <value>20</value>
+                    </entry>
+                    <entry>
+                        <key>Input Second Number</key>
+                        <value>30</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>MyProcessor</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>Success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>com.muthu4all.nifi.processors.sumtwoint.MyProcessor</type>
+        </processors>
+    </snippet>
+    <timestamp>04/01/2019 20:52:42 IST</timestamp>
+</template>
